@@ -14,7 +14,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "*", // Ensure this matches your frontend URL
+    origin: "http://localhost:3000", // Ensure this matches your frontend URL
     methods: ["GET", "POST"],
   },
 });
