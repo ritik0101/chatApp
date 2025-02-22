@@ -20,12 +20,10 @@ const io = new Server(server, {
 });
 
 
-// Serve static files
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname + '/../client'));
 
-// Serve the main HTML file
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(__dirname + '/../client/index.html'); // ✅ Correct path
 });
 
 
